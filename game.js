@@ -1,4 +1,4 @@
-var buttonColours = ["red", "blue", "green", "yellow"];
+var buttonColours = ["pink", "purple", "red", "blue", "green", "yellow"];
 
 var gamePattern = [];
 var userClickedPattern = [];
@@ -8,7 +8,7 @@ var level = 0;
 
 $(document).keypress(function() {
   if (!started) {
-    $("#level-title").text("Level " + level);
+    $("#level-title").text("Mimic it!  Level " + level);
     nextSequence();
     started = true;
   }
@@ -31,7 +31,6 @@ $(".btn").click(function() {
 
 
 function checkAnswer(currentLevel) {
-
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
 
       console.log("success");
@@ -53,7 +52,7 @@ function checkAnswer(currentLevel) {
 
       $("#level-title").text("Game Over, Press Any Key to Restart");
 
-      //2. Call startOver() if the user gets the sequence wrong.
+      //Call startOver() if the user gets the sequence wrong.
       startOver();
     }
 }
@@ -61,9 +60,9 @@ function checkAnswer(currentLevel) {
 function nextSequence() {
   userClickedPattern = [];
   level++;
-  $("#level-title").text("Level " + level);
+  $("#level-title").text("Mimic it!  Level " + level);
 
-  var randomNumber = Math.floor(Math.random() * 4);
+  var randomNumber = Math.floor(Math.random() * 6);
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
@@ -83,9 +82,8 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-//1. Create a new function called startOver().
 function startOver() {
-  //3. Inside this function, you'll need to reset the values of level, gamePattern and started variables.
+  //reset the values of level, gamePattern and started variables.
   level = 0;
   gamePattern = [];
   started = false;
