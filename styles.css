@@ -10,10 +10,17 @@ body {
   color: #21209c;
 }
 
-h2{
+#instruction{
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
-  margin:  2%;
+  margin:  1%;
+  color: #21209c;
+}
+
+#fun-fact{
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-size: 1rem;
+  margin:  1%;
   color: #21209c;
 }
 

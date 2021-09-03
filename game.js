@@ -1,5 +1,15 @@
 var buttonColours = ["pink", "red", "blue", "green","purple", "yellow"];
-
+var funFacts = [
+  "At just 10 years old, Nischal Narayanam claimed his first Guinness World Record—for most random objects memorized.",
+  "The human brain starts to remember things from the womb.",
+  "Short-term memory only lasts 20 to 30 seconds.",
+  "The human brain's storage capacity is virtually limitless.",
+  "A good night's rest helps us better store memories.",
+  "We don't remember sounds that well.",
+  "There's a peak age for facial recognition.",
+  "Depression impacts our ability to remember things.",
+  "Some lies are easier to remember than others."
+]
 var gamePattern = [];
 var userClickedPattern = [];
 
@@ -9,6 +19,8 @@ var level = 0;
 $(document).keypress(function() {
   if (!started) {
     $("#level-title").text("Mimic it!  Level " + level);
+    $("#instruction").text("Remember the sequence of the steps and mimic it.");
+    $("#fun-fact").text("Fun fact: "+ funFacts[Math.floor(Math.random() * 9)]);
     nextSequence();
     started = true;
   }
@@ -50,7 +62,9 @@ function checkAnswer(currentLevel) {
         $("body").removeClass("game-over");
       }, 200);
 
-      $("#level-title").text("Game Over at level" + level + ", Press Any Key to Restart");
+      $("#level-title").text("Game Over! You reached Level " + level+ ". Press any keyboard key to Restart.");
+      $("#instruction").text(" Most short-term memories are, well, short-term.");
+      $("#fun-fact").text("Fun fact: "+ funFacts[Math.floor(Math.random() * 9)]);
 
       //Call startOver() if the user gets the sequence wrong.
       startOver();
