@@ -1,4 +1,4 @@
-var buttonColours = ["pink", "purple", "red", "blue", "green", "yellow"];
+var buttonColours = ["pink", "red", "blue", "green","purple", "yellow"];
 
 var gamePattern = [];
 var userClickedPattern = [];
@@ -50,7 +50,7 @@ function checkAnswer(currentLevel) {
         $("body").removeClass("game-over");
       }, 200);
 
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over at level" + level + ", Press Any Key to Restart");
 
       //Call startOver() if the user gets the sequence wrong.
       startOver();
