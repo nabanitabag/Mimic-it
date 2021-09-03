@@ -6,3 +6,8 @@ with software programming by Lenny Cope. The device creates a series of tones an
 Inspired by the popular Simon game, Mimic it is an enhanced memory test game based on remembering the random sequence of 6 coloured buttons generated and mimicing it. 
 
 See what level you can reach by pumping your grey cells. Play often to boost your memory!
+
+Play it at https://nabanitabag.github.io/Mimic-it/
+
+![image](https://user-images.githubusercontent.com/30769985/131959148-7b5dffbc-ca7f-4495-8a66-bce5b326137b.png)
+
