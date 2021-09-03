@@ -1,19 +1,20 @@
 body {
   text-align: center;
   background-color: #fcf8e8;
+  background-image: url("https://www.transparenttextures.com/patterns/wet-snow.png");
 }
 
 #level-title{
   font-family: 'Press Start 2P', cursive;
   font-size: 2rem;
-  margin:  5%;
+  margin:  2% 5%;
   color: #21209c;
 }
 
 #instruction{
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
-  margin:  1%;
+  margin:  5% 1% 1% 1%;
   color: #21209c;
 }
 
@@ -69,6 +70,12 @@ body {
   background-color: purple;
 }
 
+.black{
+  background-color: black;
+}
+.white{
+  background-color: white;
+}
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;

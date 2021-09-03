@@ -1,4 +1,4 @@
-var buttonColours = ["pink", "red", "blue", "green","purple", "yellow"];
+var buttonColours = ["pink", "red", "blue", "green","purple", "yellow", "black", "white"];
 var funFacts = [
   "At just 10 years old, Nischal Narayanam claimed his first Guinness World Record—for most random objects memorized.",
   "The human brain starts to remember things from the womb.",
@@ -10,6 +10,14 @@ var funFacts = [
   "Depression impacts our ability to remember things.",
   "Some lies are easier to remember than others."
 ]
+var textures = [
+  "https://www.transparenttextures.com/patterns/tileable-wood-colored.png",
+  "https://www.transparenttextures.com/patterns/scribble-light.png",
+  "https://www.transparenttextures.com/patterns/triangular.png",
+  "https://www.transparenttextures.com/patterns/subtle-grey.png",
+  "https://www.transparenttextures.com/patterns/subtle-white-feathers.png"
+]
+
 var gamePattern = [];
 var userClickedPattern = [];
 
@@ -21,6 +29,7 @@ $(document).keypress(function() {
     $("#level-title").text("Mimic it!  Level " + level);
     $("#instruction").text("Remember the sequence of the steps and mimic it.");
     $("#fun-fact").text("Fun fact: "+ funFacts[Math.floor(Math.random() * 9)]);
+    $('body').css('background-image', 'url(' + textures[Math.floor(Math.random() * 5)] + ')');
     nextSequence();
     started = true;
   }
